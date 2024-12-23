@@ -1,14 +1,14 @@
 package main;
 
-public class Items {
-    private final Item[] itemList;
+public class ItemUpdater {
+    private final ItemCollection itemCollection;
 
-    public Items(Item[] itemList) {
-        this.itemList = itemList;
+    public ItemUpdater(ItemCollection itemCollection) {
+        this.itemCollection = itemCollection;
     }
 
     public void updateAllItemsQuality() {
-        for (Item item : itemList) {
+        for (Item item : itemCollection.getItems()) {
             updateItemQuality(item);
         }
     }
